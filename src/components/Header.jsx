@@ -3,7 +3,6 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import Box from '@mui/material/Box';
@@ -11,18 +10,15 @@ import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import styles from './Search.module.css';
 import TopBar from './TopBar';
+import SideBar from './SideBar';
 
 const Header = () => {
   return (
     <AppBar position="static" sx={{ backgroundColor: '#AA00FF' }}>
       <Toolbar>
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
-          <MenuIcon />
+        <IconButton>
+            <SideBar />
+          {/* <MenuIcon /> */}
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Aasane vibe
@@ -53,3 +49,4 @@ const Header = () => {
 };
 
 export default Header;
+
